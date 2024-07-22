@@ -12,7 +12,7 @@ import {
 
 export class TimerEntity {
   public readonly container: Container;
-  private readonly time: Text;
+  private readonly time: Text[];
   private timer = 0;
   private isTimerRunning = false;
   private onComplete: (() => void) | null = null;
@@ -64,7 +64,8 @@ export class TimerEntity {
       .toString()
       .padStart(2, '0');
 
-    this.time.text = `${minutes}${TIMER_SPACE_BETWEEN_NUMERS}${seconds}`;
+    this.time[0].text = `${minutes}`;
+    this.time[1].text = `${seconds}`;
   }
 
   private readonly onResize = (): void => {
@@ -79,16 +80,22 @@ export class TimerEntity {
     this.container.y = y + GAME_UI_MARGIN;
   }
 
-  private createTime(): Text {
-    const text = new Text(`00${TIMER_SPACE_BETWEEN_NUMERS}${this.timer}`, GAME_UI_TEXT_STYLE);
+  private createTime(): Text[] {
+    const textFirts = new Text(`00`, GAME_UI_TEXT_STYLE);
 
-    text.anchor.set(0.08, 0);
-    text.x = TIMER_SIZE.width / 2 - text.width / 2;
-    text.y = TIMER_SIZE.height / 2 - text.height / 2;
+    textFirts.anchor.set(0.08, 0);
+    textFirts.x = TIMER_SIZE.width / 2 - textFirts.width / 2 - TIMER_SPACE_BETWEEN_NUMERS;
+    textFirts.y = TIMER_SIZE.height / 2 - textFirts.height / 2;
 
-    this.container.addChild(text);
+    const textSecond = new Text(`${this.timer}`, GAME_UI_TEXT_STYLE);
 
-    return text;
+    textSecond.anchor.set(0.08, 0);
+    textSecond.x = TIMER_SIZE.width / 2 - textFirts.width / 2 + TIMER_SPACE_BETWEEN_NUMERS;
+    textSecond.y = TIMER_SIZE.height / 2 - textFirts.height / 2;
+
+    this.container.addChild(textFirts, textSecond);
+
+    return [textFirts, textSecond];
   }
 
   private createBackground(): Sprite {

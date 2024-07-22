@@ -57,7 +57,6 @@ export enum BACKGROUND_IMAGE_TOKENS {
 
 export enum FONTS_TOKEN {
   Impact = 'Impact',
-  Markerfelt = 'Markerfelt',
 }
 
 export enum UI_IMAGE_TOKENS {
@@ -76,7 +75,6 @@ export enum UI_IMAGE_TOKENS {
 
 export const FONTS = {
   [FONTS_TOKEN.Impact]: impact,
-  [FONTS_TOKEN.Markerfelt]: markerfelt,
 };
 
 export const PIPE_IMAGE = {
@@ -150,15 +148,6 @@ export const FINAL_TITLE_SIZE = {
   height: 62,
 };
 
-export const FINAL_TITLE_TEXT_STYLE = new TextStyle({
-  fontSize: 16,
-  strokeThickness: 1,
-  fontFamily: FONTS_TOKEN.Markerfelt,
-  align: 'justify',
-  fill: 0x1b1517,
-  stroke: 0x785444,
-});
-
 export const LEVEL_NUMBER_SIZE = {
   width: 50,
   height: 40,
@@ -168,7 +157,7 @@ export const TIMER_SIZE = {
   width: 90,
   height: 40,
 };
-export const TIMER_SPACE_BETWEEN_NUMERS = '           ';
+export const TIMER_SPACE_BETWEEN_NUMERS = 20;
 
 export const GAME_UI_TEXT_STYLE = new TextStyle({
   fontSize: 16,

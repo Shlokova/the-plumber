@@ -22,13 +22,6 @@ export const manifest: AssetsManifest = {
             family: FONTS_TOKEN.Impact,
           },
         },
-        {
-          alias: FONTS_TOKEN.Markerfelt,
-          src: FONTS[FONTS_TOKEN.Markerfelt],
-          data: {
-            family: FONTS_TOKEN.Markerfelt,
-          },
-        },
       ],
     },
     {
