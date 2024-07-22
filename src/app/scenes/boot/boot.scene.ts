@@ -9,14 +9,14 @@ export class BootScene {
 
   public async start(): Promise<void> {
     await this.preload();
-    this.gameManager.openStartPage();
+    this.gameManager.winGame();
   }
 
   public destroy(): void {}
 
   private async preload(): Promise<void> {
     await Assets.init({ manifest });
-    await Assets.loadBundle(['pipes', 'backgrounds', 'ui']);
+    await Assets.loadBundle(['font', 'pipes', 'backgrounds', 'ui']);
   }
 }
 

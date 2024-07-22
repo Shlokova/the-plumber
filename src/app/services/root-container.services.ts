@@ -26,8 +26,6 @@ export class RootContainerService {
 
   public init(): void {
     this.$root.appendChild(this.app.view);
-    //@ts-ignore
-    globalThis.__PIXI_APP__ = this.app;
   }
 
   public on(event: any, fn: (...args: any) => void, context?: any): void {

@@ -28,7 +28,8 @@ import startButton from '../src/assets/ui/start_button.png';
 import timerBackground from '../src/assets/ui/timer_background.png';
 import winTitle from '../src/assets/ui/win_title.png';
 import { TextStyle } from 'pixi.js';
-import font from '../src/assets/font/Impact.ttf';
+import impact from '../src/assets/font/Impact.ttf';
+import markerfelt from '../src/assets/font/Markerfelt.ttf';
 
 export enum PIPE_IMAGE_TOKENS {
   CornerPipeImgEmpty = 'cornerPipeImgEmpty',
@@ -56,6 +57,7 @@ export enum BACKGROUND_IMAGE_TOKENS {
 
 export enum FONTS_TOKEN {
   Impact = 'Impact',
+  Markerfelt = 'Markerfelt',
 }
 
 export enum UI_IMAGE_TOKENS {
@@ -73,7 +75,8 @@ export enum UI_IMAGE_TOKENS {
 }
 
 export const FONTS = {
-  [FONTS_TOKEN.Impact]: font,
+  [FONTS_TOKEN.Impact]: impact,
+  [FONTS_TOKEN.Markerfelt]: markerfelt,
 };
 
 export const PIPE_IMAGE = {
@@ -146,6 +149,15 @@ export const FINAL_TITLE_SIZE = {
   width: 140,
   height: 62,
 };
+
+export const FINAL_TITLE_TEXT_STYLE = new TextStyle({
+  fontSize: 16,
+  strokeThickness: 1,
+  fontFamily: FONTS_TOKEN.Markerfelt,
+  align: 'justify',
+  fill: 0x1b1517,
+  stroke: 0x785444,
+});
 
 export const LEVEL_NUMBER_SIZE = {
   width: 50,
