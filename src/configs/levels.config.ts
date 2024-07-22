@@ -8,7 +8,7 @@ export const LEVELS = [
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
           startPipePosition: START_PIPE_POSITION.Right,
         },
         {
@@ -61,7 +61,99 @@ export const LEVELS = [
           pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
           startPipePosition: START_PIPE_POSITION.Right,
         },
-        { pipe: PIPE_VARIANTS.start_pipe, startPipePosition: START_PIPE_POSITION.Right },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Left,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Left,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+      ],
+    ],
+  },
+  {
+    timeLimit: 120,
+    field: [
+      [
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
       ],
       [
@@ -82,14 +174,82 @@ export const LEVELS = [
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Right },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
           startPipePosition: START_PIPE_POSITION.Top,
         },
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
           startPipePosition: START_PIPE_POSITION.Bottom,
         },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+      ],
+      [
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Right },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Top },
+      ],
+    ],
+  },
+  {
+    timeLimit: 120,
+    field: [
+      [
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Left,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          startPipePosition: START_PIPE_POSITION.Left,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+      ],
+      [
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.QuarterPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
       ],
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Right },
@@ -114,7 +274,10 @@ export const LEVELS = [
           pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
           startPipePosition: START_PIPE_POSITION.Right,
         },
-        { pipe: PIPE_VARIANTS.start_pipe, startPipePosition: START_PIPE_POSITION.Right },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
       ],
       [
@@ -123,127 +286,57 @@ export const LEVELS = [
           startPipePosition: START_PIPE_POSITION.Right,
         },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
           startPipePosition: START_PIPE_POSITION.Left,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
-          startPipePosition: START_PIPE_POSITION.Left,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Bottom,
-        },
-      ],
-      [
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Right,
         },
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.QuarterPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
+          startPipePosition: START_PIPE_POSITION.Left,
         },
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
           startPipePosition: START_PIPE_POSITION.Bottom,
         },
+      ],
+      [
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
+          startPipePosition: START_PIPE_POSITION.Right,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          startPipePosition: START_PIPE_POSITION.Top,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.QuarterPipe],
+          startPipePosition: START_PIPE_POSITION.Bottom,
+        },
+        {
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
           startPipePosition: START_PIPE_POSITION.Top,
         },
       ],
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Right },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
           startPipePosition: START_PIPE_POSITION.Top,
         },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
           startPipePosition: START_PIPE_POSITION.Bottom,
         },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Top },
       ],
-    ],
-  },
-  {
-    timeLimit: 120,
-    field: [
       [
-        { pipe: PIPE_VARIANTS.start_pipe, startPipePosition: START_PIPE_POSITION.Top },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-      ],
-      [
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-      ],
-      [
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
+        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Right },
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
           startPipePosition: START_PIPE_POSITION.Top,
         },
-        { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Top },
-      ],
-    ],
-  },
-  {
-    timeLimit: 200,
-    field: [
-      [
-        { pipe: PIPE_VARIANTS.start_pipe, startPipePosition: START_PIPE_POSITION.Top },
         {
           pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-      ],
-      [
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.TriplePipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-      ],
-      [
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.CornerPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
-        },
-        {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.StraightPipe],
-          startPipePosition: START_PIPE_POSITION.Top,
+          startPipePosition: START_PIPE_POSITION.Bottom,
         },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EndPipe], startPipePosition: START_PIPE_POSITION.Top },
       ],
