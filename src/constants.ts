@@ -28,6 +28,7 @@ import startButton from '../src/assets/ui/start_button.png';
 import timerBackground from '../src/assets/ui/timer_background.png';
 import winTitle from '../src/assets/ui/win_title.png';
 import { TextStyle } from 'pixi.js';
+import font from '../src/assets/font/Impact.ttf';
 
 export enum PIPE_IMAGE_TOKENS {
   CornerPipeImgEmpty = 'cornerPipeImgEmpty',
@@ -53,6 +54,10 @@ export enum BACKGROUND_IMAGE_TOKENS {
   StartBackground = 'startBackground',
 }
 
+export enum FONTS_TOKEN {
+  Impact = 'Impact',
+}
+
 export enum UI_IMAGE_TOKENS {
   LevelNumberBackground = 'levelNumberBackground',
   Logo = 'logo',
@@ -66,6 +71,10 @@ export enum UI_IMAGE_TOKENS {
   TimerBackground = 'timerBackground',
   WinTitle = 'winTitle',
 }
+
+export const FONTS = {
+  [FONTS_TOKEN.Impact]: font,
+};
 
 export const PIPE_IMAGE = {
   [PIPE_IMAGE_TOKENS.CornerPipeImgEmpty]: cornerPipeImgEmpty,
@@ -152,7 +161,7 @@ export const TIMER_SPACE_BETWEEN_NUMERS = '           ';
 export const GAME_UI_TEXT_STYLE = new TextStyle({
   fontSize: 16,
   strokeThickness: 1,
-  fontFamily: 'Impact',
+  fontFamily: FONTS_TOKEN.Impact,
   fontWeight: 'bold',
   align: 'justify',
   fill: 0x1b1517,
@@ -181,7 +190,7 @@ export const LEVEL_SELECTOR_SIZE = {
 export const LEVEL_SELECTOR_TEXT_STYLE = new TextStyle({
   fontSize: 16,
   strokeThickness: 1,
-  fontFamily: 'Impact',
+  fontFamily: FONTS_TOKEN.Impact,
   fontWeight: 'bold',
   align: 'justify',
   fill: 0x1b1517,

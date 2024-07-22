@@ -2,6 +2,8 @@ import { AssetsManifest } from 'pixi.js';
 import {
   BACKGROUND_IMAGE,
   BACKGROUND_IMAGE_TOKENS,
+  FONTS,
+  FONTS_TOKEN,
   PIPE_IMAGE,
   PIPE_IMAGE_TOKENS,
   UI_IMAGE,
@@ -10,6 +12,18 @@ import {
 
 export const manifest: AssetsManifest = {
   bundles: [
+    {
+      name: 'pipes',
+      assets: [
+        {
+          alias: FONTS_TOKEN.Impact,
+          src: FONTS[FONTS_TOKEN.Impact],
+          data: {
+            family: FONTS_TOKEN.Impact,
+          },
+        },
+      ],
+    },
     {
       name: 'pipes',
       assets: [

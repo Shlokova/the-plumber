@@ -3,7 +3,7 @@ import { PIPE_VARIANT, PIPE_VARIANTS } from './pipes.config';
 
 export const LEVELS = [
   {
-    timeLimit: 120,
+    timeLimit: 20,
     field: [
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
