@@ -8,11 +8,11 @@ export const LEVELS = [
       [
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
           startPipePosition: START_PIPE_POSITION.Right,
         },
         {
-          pipe: PIPE_VARIANTS[PIPE_VARIANT.StartPipe],
+          pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe],
           startPipePosition: START_PIPE_POSITION.Right,
         },
         { pipe: PIPE_VARIANTS[PIPE_VARIANT.EmptyPipe], startPipePosition: START_PIPE_POSITION.Top },
