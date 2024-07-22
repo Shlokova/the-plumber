@@ -9,7 +9,7 @@ export class BootScene {
 
   public async start(): Promise<void> {
     await this.preload();
-    this.gameManager.winGame();
+    this.gameManager.openStartPage();
   }
 
   public destroy(): void {}
