@@ -1,7 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const InlineSourceWebpackPlugin = require('html-inline-script-webpack-plugin');
 
 const babelOptions = {
   presets: [
@@ -15,12 +15,16 @@ const babelOptions = {
   ],
 };
 const config = {
-  mode: 'development',
+  mode: 'production',
   context: path.resolve(__dirname, './src'),
   entry: '/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '',
+  },
+  performance: {
+    hints: false,
   },
   module: {
     rules: [
@@ -46,7 +50,6 @@ const config = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -56,14 +59,7 @@ const config = {
       inlineSource: '.(js|css)$',
       minify: false,
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'assets',
-          to: 'assets',
-        },
-      ],
-    }),
+    new InlineSourceWebpackPlugin(),
   ],
   devServer: {
     static: {
